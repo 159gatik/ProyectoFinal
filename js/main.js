@@ -6,7 +6,7 @@ class Cliente {
         this.saldo = saldo;
     }
     mostrarCliente() {
-        saludo.innerHTML = `<b>Que tenga un buen día, ${nombreIngresado} ${apellidoIngresado} </b>`
+        saludo.innerHTML = `<b>¡Hola, ${nombreIngresado} ${apellidoIngresado}!</b>`
     }
 
     getSaldoFormateado() {
@@ -35,6 +35,7 @@ class Contacto {
 
 const contactos = [];
 
+//EXTRACCIONES 
 
 const extraccion = () => {
     let opcionCorrecta = false;
@@ -62,6 +63,8 @@ const extraccion = () => {
     extraer.innerHTML = "Usted extrajo $" + dineroIngresado + ". Su saldo restante es " + cliente1.getSaldoFormateado();
     document.body.appendChild(extraer)
 }
+
+//TRANSFERENCIA
 
 const transferir = () => {
 
@@ -101,6 +104,10 @@ const transferir = () => {
     cliente1.saldo -= saldoATransferir
 
 }
+
+
+// AGREGA CONTACTOS 
+
 const agregarContacto = () => {
 
     let nombre = prompt("Ingrese nombre")
@@ -112,7 +119,7 @@ const agregarContacto = () => {
 
 const listarContactos = () => {
 
-    let listado = ` `;
+    let listado = ``;
 
     for (let i = 0; i < contactos.length; i++) {
 
@@ -120,15 +127,18 @@ const listarContactos = () => {
 
         const listado = document.createElement("p");
 
-        listado.innerHTML = `Nombre: ${unContacto.nombre}
-         CBU: ${unContacto.cbu}
-         Referencia: ${unContacto.referencia}
+        listado.innerHTML = `Nombre: ${unContacto.nombre} \n
+         CBU: ${unContacto.cbu} \n
+         Referencia: ${unContacto.referencia} \n
+
          `
 
         document.body.appendChild(listado)
 
     }
 }
+
+//MENU DE CONTACTOS
 
 const dibujarMenuDeContactos = () => {
 

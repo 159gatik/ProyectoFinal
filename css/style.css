@@ -1,9 +1,12 @@
-nav {
-    display: flex;
-    justify-content: space-around;
-    margin: 40px;
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
+#saludo {
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 
 ul li {
     text-decoration: none;
@@ -17,9 +20,9 @@ ul li {
 }
 
 img {
-    height: 200px;
+    height: 150px;
     position: relative;
-    bottom: 100px;
+    bottom: 55px;
 }
 
 
