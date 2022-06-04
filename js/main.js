@@ -1,12 +1,12 @@
 class Cliente {
-    constructor(id, nombre, apellido, saldo) {
+    constructor(id, nombre, saldo) {
         this.id = id;
         this.nombre = nombre;
-        this.apellido = apellido;
         this.saldo = saldo;
     }
     mostrarCliente() {
-        saludo.innerHTML = `<b>¡Hola, ${nombreIngresado} ${apellidoIngresado}!</b>`
+        saludo.innerHTML = `<b>¡Hola, ${nombreIngresado}!</b>`
+        localStorage.setItem("usuario", nombreIngresado);
     }
 
     getSaldoFormateado() {
@@ -16,16 +16,15 @@ class Cliente {
 
 const saludo = document.getElementById("saludo");
 
-
-const nombreIngresado = prompt("Ingresar su nombre");
-const apellidoIngresado = prompt("Ingresar apellido");
-
-const saldoPorDefecto = 30000;
-const cliente1 = new Cliente(1, nombreIngresado, apellidoIngresado, saldoPorDefecto);
+let nombreIngresado = prompt("Ingresar su nombre");
+let saldoPorDefecto = 30000;
+const cliente1 = new Cliente(1, nombreIngresado, saldoPorDefecto);
 
 cliente1.mostrarCliente();
 
+
 class Contacto {
+
     constructor(nombre, cbu, referencia) {
         this.nombre = nombre;
         this.cbu = cbu;
@@ -33,7 +32,30 @@ class Contacto {
     }
 }
 
-const contactos = [];
+
+
+
+// Util
+const setItemInLocalStorage = (name, value) => {
+    localStorage.setItem(name, JSON.stringify(value));
+}
+
+const getItemInLocalStorage = name => {
+    return JSON.parse(localStorage.getItem(name));
+}
+
+const contactosObtenidos = getItemInLocalStorage("contactos");
+
+let contactos;
+
+// si los contactos obtenidos son diferentes de nulo, se los asigno. Sino le pongo una l vacio
+if (contactosObtenidos) {
+    contactos = contactosObtenidos;
+} else {
+    contactos = [];
+}
+
+
 
 //EXTRACCIONES 
 
@@ -106,6 +128,8 @@ const transferir = () => {
 }
 
 
+
+
 // AGREGA CONTACTOS 
 
 const agregarContacto = () => {
@@ -114,8 +138,15 @@ const agregarContacto = () => {
     let cbu = prompt("Ingrese cbu")
     let referencia = prompt("Ingrese una referencia")
 
-    contactos.push(new Contacto(nombre, cbu, referencia));
+    let contacto = new Contacto(nombre, cbu, referencia);
+
+    contactos.push(contacto);
+
+    setItemInLocalStorage("contactos", contactos);
 }
+
+
+
 
 const listarContactos = () => {
 
@@ -124,18 +155,15 @@ const listarContactos = () => {
     for (let i = 0; i < contactos.length; i++) {
 
         let unContacto = contactos[i];
-
         const listado = document.createElement("p");
 
-        listado.innerHTML = `Nombre: ${unContacto.nombre} \n
-         CBU: ${unContacto.cbu} \n
-         Referencia: ${unContacto.referencia} \n
-
+        listado.innerHTML = `Nombre: ${unContacto.nombre}
+         CBU: ${unContacto.cbu}
+         Referencia: ${unContacto.referencia}
          `
-
         document.body.appendChild(listado)
-
     }
+
 }
 
 //MENU DE CONTACTOS
@@ -236,3 +264,5 @@ const divisor = () => {
 }
 
 divisor();
+
+
