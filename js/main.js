@@ -16,8 +16,14 @@ class Cliente {
 
 const saludo = document.getElementById("saludo");
 
-let nombreIngresado = prompt("Ingresar su nombre");
+
+let nombreIngresado = prompt("ingrese su nombre");
+
 let saldoPorDefecto = 30000;
+
+
+
+
 const cliente1 = new Cliente(1, nombreIngresado, saldoPorDefecto);
 
 cliente1.mostrarCliente();
@@ -31,8 +37,6 @@ class Contacto {
         this.referencia = referencia;
     }
 }
-
-
 
 
 // Util
@@ -130,7 +134,8 @@ const transferir = () => {
 
 
 
-// AGREGA CONTACTOS 
+// AGREGA CONTACTOS
+
 
 const agregarContacto = () => {
 
@@ -200,48 +205,28 @@ const dibujarMenuDeContactos = () => {
 
 //SE CREA EL MENU DESDE JS
 
+const consultarSaldo = () => {
+    const saldo = document.createElement("p");
+
+    saldo.innerHTML = `Su saldo es: ${cliente1.getSaldoFormateado()}`;
+    document.body.appendChild(saldo)
+}
+
 const menuNavegacion = () => {
-    let opciones = ["CONSULTAR SALDO", "EXTRACCION", "TRANSFERIR", "CONTACTOS"]
+    let opciones = [{ nombre: "CONSULTAR SALDO", metodo: consultarSaldo },
+    { nombre: "EXTRACCION", metodo: extraccion },
+    { nombre: "TRANSFERIR", metodo: transferir },
+    { nombre: "CONTACTOS", metodo: dibujarMenuDeContactos }]
 
     opciones.forEach((opcion) => {
 
         const boton = document.createElement("button");
 
-        if (opcion === "CONSULTAR SALDO") {
-            boton.addEventListener("click", () => {
+        boton.addEventListener("click", () => {
+            opcion.metodo();
+        })
 
-                const saldo = document.createElement("p");
-
-                saldo.innerHTML = `Su saldo es: ${cliente1.getSaldoFormateado()}`;
-                document.body.appendChild(saldo)
-            })
-        }
-
-        else if (opcion === "EXTRACCION") {
-            boton.addEventListener("click", () => {
-                extraccion();
-
-
-            })
-        }
-        else if (opcion === "TRANSFERIR") {
-            boton.addEventListener("click", () => {
-
-                transferir();
-
-            })
-        }
-
-        else if (opcion === "CONTACTOS") {
-            boton.addEventListener("click", () => {
-
-                dibujarMenuDeContactos();
-
-
-            })
-        }
-
-        boton.innerHTML = opcion;
+        boton.innerHTML = opcion.nombre;
         document.body.appendChild(boton);
     });
 }
