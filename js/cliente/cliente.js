@@ -7,12 +7,6 @@ class Cliente {
     }
 
     mostrarCliente() {
-        // const saludarUsuario = document.getElementById("saludo");
-
-        // saludarUsuario.innerHTML = `<b>¡Hola, ${nombreIngresado}!</b>`
-        // localStorage.setItem("usuario", nombreIngresado);
-
-
         const saludarUsuario = document.getElementById("saludo");
 
         saludarUsuario.innerHTML = `<b>¡Hola, ${this.nombre}!</b>`

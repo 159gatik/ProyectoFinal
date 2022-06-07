@@ -14,8 +14,5 @@ const getUsuarioInicial = () => {
 
     const clienteRegistrado = new Cliente(1, nombreIngresado, saldoPorDefecto);
 
-    // clienteRegistrado.mostrarCliente();
-
-
     return clienteRegistrado;
 }
