@@ -8,11 +8,4 @@ const getItemInLocalStorage = name => {
 
 const contactosObtenidos = getItemInLocalStorage("contactos");
 
-let contactos;
-
-
-if (contactosObtenidos) {
-    contactos = contactosObtenidos;
-} else {
-    contactos = [];
-}
+const contactos = contactosObtenidos ? contactosObtenidos : []

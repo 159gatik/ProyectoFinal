@@ -1,5 +1,3 @@
-
-
 const usuarioInicial = getUsuarioInicial();
 
 usuarioInicial.mostrarCliente();

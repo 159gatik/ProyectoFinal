@@ -9,6 +9,7 @@ const menuNavegacion = () => {
 
         const boton = document.createElement("button");
 
+        boton.id = "btn_id";
         boton.addEventListener("click", () => {
             opcion.metodo();
         })

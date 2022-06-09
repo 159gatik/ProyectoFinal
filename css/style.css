@@ -1,11 +1,30 @@
-h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+#titulo {
+    font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    transform: rotate(-1deg);
+    color: #313131;
+    text-shadow: rgba(93, 82, 248, 0.692) 3px 5px 3px;
 }
+
+.div_form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 200px;
+    color: #00a9d4;
+    background-color: #313131;
+    box-shadow: #6b6b6b 10px 15px 30px 3px;
+}
+
 
 #saludo {
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#agregarContacto {
+    color: blue;
+    background-color: antiquewhite;
+    padding: 10px;
 }
 
 ul li {
@@ -32,9 +51,8 @@ p {
     color: rgba(50, 62, 236, 0.692);
 }
 
-
-button {
-    margin-left: 100px;
+#btn_id {
+    margin-left: 130px;
     text-align: center;
     font-size: 16px;
     letter-spacing: 10px;
@@ -49,7 +67,7 @@ button {
     touch-action: manipulation;
 }
 
-button:after {
+#btn_id::after {
     content: "";
     background-color: rgba(50, 62, 236, 0.692);
     width: 100%;
@@ -61,13 +79,53 @@ button:after {
     transition: 0.2s;
 }
 
-button:hover:after {
+#btn_id:hover:after {
     top: 0px;
     left: 0px;
 }
 
-@media (min-width: 768px) {
+
+@media (max-width: 800px) {
     button {
-        padding: 13px 50px 13px;
+        display: block;
+    }
+}
+
+#btn_contact {
+    margin-left: 500px;
+    background-color: #00a9d4;
+    color: #000000;
+    font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    text-align: center;
+    text-decoration: none #000000 solid;
+    cursor: pointer;
+    transform: rotate(-2deg);
+    touch-action: manipulation;
+}
+
+#btn_contact:focus {
+    outline: 0;
+}
+
+#btn_contact:after {
+    content: '';
+    position: absolute;
+    border: 1px solid #000000;
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+}
+
+#btn_contact:hover:after {
+    bottom: 2px;
+    left: 2px;
+}
+
+@media (min-width: 768px) {
+    #btn_contact {
+        padding: .75rem 3rem;
+        font-size: 1.25rem;
     }
 }

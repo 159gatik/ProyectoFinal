@@ -26,7 +26,6 @@ const extraccion = () => {
     document.body.appendChild(extraer)
 }
 
-
 const transferir = () => {
 
     let opcionIncorrectaCbu = true;
@@ -49,6 +48,8 @@ const transferir = () => {
     while (opcionIncorrecta) {
 
         saldoATransferir = Number(prompt("Ingresar saldo"));
+
+        let permiso;
 
         if (saldoATransferir > usuarioInicial.saldo) {
             alert(`El monto que desea transferir supera el saldo de su cuenta, el saldo maximo a transferir es de: ${usuarioInicial.getSaldoFormateado()}`)

@@ -1,14 +1,23 @@
-const agregarContacto = () => {
+let menuDibujado;
 
-    let nombre = prompt("Ingrese nombre")
-    let cbu = prompt("Ingrese cbu")
-    let referencia = prompt("Ingrese una referencia")
 
-    let contacto = new Contacto(nombre, cbu, referencia);
+document.getElementById("agregarContacto").addEventListener("click", () => {
 
-    contactos.push(contacto);
+    const nombre = document.getElementById("nombre").value;
+    const cbu = document.getElementById("cbu").value;
+    const referencia = document.getElementById("referencia").value;
+
+    contactos.push(new Contacto(nombre, cbu, referencia));
 
     setItemInLocalStorage("contactos", contactos);
+
+    document.getElementById("contactoFormulario").style.display = 'none';
+
+})
+
+
+const mostrarFormularioDeAgregarContacto = (nombre, cbu, referencia) => {
+    document.getElementById("contactoFormulario").style.display = 'block';
 }
 
 
@@ -33,29 +42,25 @@ const listarContactos = () => {
 
 const dibujarMenuDeContactos = () => {
 
-    let seguir = true;
+    if (!menuDibujado) {
+        menuDibujado = true;
 
-    while (seguir) {
+        let opciones = [
+            { nombre: "AGREGAR CONTACTO NUEVO", metodo: mostrarFormularioDeAgregarContacto },
+            { nombre: "LISTAR CONTACTOS", metodo: listarContactos }]
 
-        let opcion = prompt(`Ingrese opción: 
-                  1. AGREGAR CONTACTO NUEVO
-                  2. LISTAR CONTACTOS
-                  3. VOLVER`);
+        opciones.forEach((opcion) => {
 
-        switch (opcion) {
-            case "1":
-                agregarContacto();
-                break;
-            case "2":
-                listarContactos();
-                break;
-            case "3":
-                seguir = false;
-                break;
-            default:
-                alert("Ingrese una opción correcta");
-                break;
-        }
+            const boton = document.createElement("button");
+            boton.id = "btn_contact"
+            boton.addEventListener("click", () => {
+                opcion.metodo();
+            })
+
+            boton.innerHTML = opcion.nombre;
+            document.body.appendChild(boton);
+        });
 
     }
+
 }
