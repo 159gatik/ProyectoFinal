@@ -1,6 +1,7 @@
-const usuarioInicial = getUsuarioInicial();
+// const usuarioInicial = getUsuarioInicial();
+// let usuarioInicial;
 
-usuarioInicial.mostrarCliente();
+// usuarioInicial.mostrarCliente();
 
 menuNavegacion();
 

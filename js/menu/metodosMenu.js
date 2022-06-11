@@ -15,7 +15,7 @@ const menuNavegacion = () => {
         })
 
         boton.innerHTML = opcion.nombre;
-        document.body.appendChild(boton);
+        document.getElementById("main").appendChild(boton);
     });
 }
 
@@ -24,11 +24,10 @@ const divisorDeMenu = () => {
     const barra = document.createElement('div');
     barra.className = 'divisor';
 
-
     const image = document.createElement("img");
     image.src = "./img/picture.png"
 
-    document.body.appendChild(barra)
+    document.getElementById("main").appendChild(barra);
 
     document.querySelector(".divisor").appendChild(image)
 

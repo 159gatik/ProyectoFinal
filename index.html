@@ -7,34 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entrega Eventos</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
 
-    <h1 id="titulo">Bank</h1>
-
-    <h3 id="saludo" class="animate__animated animate__backInLeft"></h3>
-
-    <div id="contactoFormulario" class="div_form" style="display: none;">
-        <!---------------------------------------- Agegar Contacto -->
-        <label>Nombre:</label>
-        <input type="text" id="nombre"><br><br>
-        <label>CBU:</label>
-        <input type="text" id="cbu"><br><br>
-        <label>Referencia:</label>
-        <input type="text" id="referencia"><br><br>
-        <button type="button" id="agregarContacto">Agregar Usuario</button>
-        <!--------------------------------------------------------------------------------------------------->
+    <div id="formExtraccion">
+        <label>Cuanto desea retirar?</label>
+        <input type="number" id="extraccionDinero"><br><br>
+        <button type="button" id="dineroExtraido">Extraer</button>
     </div>
+
+
+    <div id="formLogin">
+        <label>Usuario:</label>
+        <input type="text" id="usuarioIngresado"><br><br>
+        <label>Contraseña:</label>
+        <input type="password" id="contraseña"><br><br>
+        <button type="button" id="ingresarUsuario">Ingresar</button>
+    </div>
+
+
+    <div id="main" style="display: none;">
+        <h1 id="titulo">Bank</h1>
+
+        <h3 id="saludo" class="animate__animated animate__backInLeft"></h3>
+
+        <div id="contactoFormulario" class="div_form" style="display: none;">
+            <label>Nombre:</label>
+            <input type="text" id="nombre"><br><br>
+            <label>CBU:</label>
+            <input type="text" id="cbu"><br><br>
+            <label>Referencia:</label>
+            <input type="text" id="referencia"><br><br>
+            <button type="button" id="agregarContacto">Agregar Usuario</button>
+        </div>
+    </div>
+
     <script src="./js/menu/metodosMenu.js"></script>
+    <script src="./js/util/localStorage.js"></script>
     <script src="./js/cliente/cliente.js"></script>
     <script src="./js/cliente/metodosCliente.js"></script>
     <script src="./js/contactos/contacto.js"></script>
     <script src="./js/contactos/metodosContactos.js"></script>
     <script src="./js/cajero/metodosCajero.js"></script>
-    <script src="./js/util/localStorage.js"></script>
     <script src="./js/main.js"></script>
 
 </body>

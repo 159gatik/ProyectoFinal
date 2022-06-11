@@ -17,3 +17,25 @@ class Cliente {
         return "$ " + Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(this.saldo);
     }
 }
+
+
+
+
+const getUsuarioInicial = () => {
+
+    const usuarioObtenido = getItemInLocalStorage("usuarioRegistrado");
+
+    let usuarioResultado;
+
+    if (usuarioObtenido) {
+        usuarioResultado = usuarioObtenido;
+        document.getElementById("main").style.display = 'block';
+        document.getElementById("formLogin").style.display = 'none';
+    }
+
+    return usuarioResultado;
+}
+
+// Variable de cliente global
+let usuarioInicial = getUsuarioInicial();
+
