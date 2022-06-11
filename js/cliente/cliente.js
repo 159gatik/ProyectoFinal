@@ -28,7 +28,8 @@ const getUsuarioInicial = () => {
     let usuarioResultado;
 
     if (usuarioObtenido) {
-        usuarioResultado = usuarioObtenido;
+        // usuarioResultado = usuarioObtenido;
+        usuarioResultado = new Cliente(1, usuarioObtenido.nombre, usuarioObtenido.saldo);
         document.getElementById("main").style.display = 'block';
         document.getElementById("formLogin").style.display = 'none';
     }

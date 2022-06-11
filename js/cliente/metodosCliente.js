@@ -6,19 +6,6 @@ const consultarSaldo = () => {
 }
 
 
-// const getUsuarioInicial = () => {
-
-//     let nombreIngresado = prompt("ingrese su nombre");
-
-//     let saldoPorDefecto = 30000;
-
-//     const clienteRegistrado = new Cliente(1, nombreIngresado, saldoPorDefecto);
-
-//     return clienteRegistrado;
-// }
-
-
-
 document.getElementById("ingresarUsuario").addEventListener("click", () => {
 
     const user = document.getElementById("usuarioIngresado").value;

@@ -1,30 +1,59 @@
 
-const extraccion = () => {
-    let opcionCorrecta = false;
-    let dineroIngresado;
-    while (opcionCorrecta === false) {
-        dineroIngresado = Number(
-            prompt(`¿Cuánto querés retirar ${usuarioInicial.nombre} ? Solo puede ingresar:
-                                          $2500 
-                                          $4000 
-                                          $10000`)
-        );
-        console.log(dineroIngresado);
-        if (
-            dineroIngresado === 2500 ||
-            dineroIngresado === 4000 ||
-            dineroIngresado === 10000
-        ) {
-            opcionCorrecta = true;
-            usuarioInicial.saldo -= dineroIngresado;
-        } else {
-            alert("El monto es invalido, pruebe de nuevo");
-        }
-    }
-    const extraer = document.createElement("p");
-    extraer.innerHTML = "Usted extrajo $" + dineroIngresado + ". Su saldo restante es " + usuarioInicial.getSaldoFormateado();
-    document.body.appendChild(extraer)
-}
+// const extraccion = () => {
+//     let opcionCorrecta = false;
+//     let dineroIngresado;
+//     while (opcionCorrecta === false) {
+//         dineroIngresado = Number(
+//             prompt(`¿Cuánto querés retirar ${usuarioInicial.nombre} ? Solo puede ingresar:
+//                                           $2500 
+//                                           $4000 
+//                                           $10000`)
+//         );
+//         console.log(dineroIngresado);
+//         if (
+//             dineroIngresado === 2500 ||
+//             dineroIngresado === 4000 ||
+//             dineroIngresado === 10000
+//         ) {
+//             opcionCorrecta = true;
+//             usuarioInicial.saldo -= dineroIngresado;
+//         } else {
+//             alert("El monto es invalido, pruebe de nuevo");
+//         }
+//     }
+//     document.getElementById("dineroExtraido").addEventListener("click", () => {
+
+//         let extraerDinero = document.getElementById("extraccionDinero").value;
+
+//         document.getElementById("formExtraccion").style.display = 'block';
+
+//     })
+//     const extraer = document.createElement("p");
+//     extraer.innerHTML = "Usted extrajo $" + dineroIngresado + ". Su saldo restante es " + usuarioInicial.getSaldoFormateado();
+//     document.body.appendChild(extraer)
+// }
+
+
+document.getElementById("btnExtraer").addEventListener("click", () => {
+
+    const dineroIngresado = document.getElementById("extraccionDinero").value;
+
+    usuarioInicial.saldo -= dineroIngresado;
+
+
+    Swal.fire(
+        'Extracion exitosa!',
+        "Usted extrajo $" + dineroIngresado + ". Su saldo restante es " + usuarioInicial.getSaldoFormateado(),
+        'success'
+    )
+
+
+    document.getElementById("formExtraccion").style.display = 'none';
+
+})
+
+
+
 
 const transferir = () => {
 

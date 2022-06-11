@@ -1,3 +1,11 @@
+.gradient-custom {
+    background: #6a11cb;
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+
+
 #titulo {
     font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     transform: rotate(-1deg);
@@ -34,7 +42,7 @@ ul li {
 
 .divisor {
     margin-top: 50px;
-    background-color: rgba(50, 62, 236, 0.692);
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
     height: 80px;
 }
 
@@ -58,6 +66,9 @@ p {
     margin-left: 130px;
     text-align: center;
     font-size: 16px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
     letter-spacing: 10px;
     padding: 13px 20px 13px;
     outline: 0;
@@ -72,7 +83,7 @@ p {
 
 #btn_id::after {
     content: "";
-    background-color: rgba(50, 62, 236, 0.692);
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
     width: 100%;
     z-index: -1;
     position: absolute;
