@@ -15,7 +15,7 @@
 <body>
 
 
-    <div id="formLogin" style="display: none;">
+    <div id="formLogin">
         <section class="vh-100 gradient-custom">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -46,23 +46,6 @@
 
 
 
-
-    <div id="formExtraccion">
-        <label>Cuanto desea retirar?</label>
-        <input type="number" id="extraccionDinero"><br><br>
-        <button type="button" id="btnExtraer">Extraer</button>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
     <div id="main" style="display: none;">
         <h1 id="titulo">Bank</h1>
 
@@ -78,9 +61,12 @@
             <button type="button" id="agregarContacto">Agregar Usuario</button>
         </div>
     </div>
+    <div id="formExtraccion" style="display: none;">
+        <label>Cuanto desea retirar?</label>
+        <input type="number" id="extraccionDinero"><br><br>
+        <button type="button" id="btnExtraer">Extraer</button>
 
-
-
+    </div>
 
 
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

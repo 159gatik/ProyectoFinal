@@ -33,13 +33,10 @@
 //     document.body.appendChild(extraer)
 // }
 
-
 document.getElementById("btnExtraer").addEventListener("click", () => {
 
     const dineroIngresado = document.getElementById("extraccionDinero").value;
-
     usuarioInicial.saldo -= dineroIngresado;
-
 
     Swal.fire(
         'Extracion exitosa!',
@@ -47,13 +44,15 @@ document.getElementById("btnExtraer").addEventListener("click", () => {
         'success'
     )
 
-
     document.getElementById("formExtraccion").style.display = 'none';
-
 })
 
+const extraccion = () => {
+
+    document.getElementById("formExtraccion").style.display = 'block';
 
 
+}
 
 const transferir = () => {
 
