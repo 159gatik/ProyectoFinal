@@ -248,6 +248,6 @@ input {
 
 footer {
     margin-top: 600px;
-    min-height: 150px;
-    background-color: #00a9d4;
+    min-height: 120px;
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
 }
