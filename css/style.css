@@ -60,7 +60,7 @@ p {
 
 
 
-#formExtraccion {
+.formularios {
     display: flex;
     margin-top: 20px;
     margin-left: auto;
@@ -72,7 +72,7 @@ p {
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
 }
 
-#formExtraccion label {
+.formularios label {
     display: flex;
     justify-content: center;
     font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -83,7 +83,7 @@ p {
     text-shadow: #050505 2px 2px 3px;
 }
 
-#formExtraccion input {
+.formularios input {
     /* margin-top: 20px;
     margin-left: 50px;
     margin-top: 50px; */
@@ -124,6 +124,33 @@ p {
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(-1px);
+}
+
+#btnTransferir {
+    margin-bottom: 10px;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    margin-left: 100px;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    line-height: 1.25;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    transition: all 250ms;
+    width: auto;
+}
+
+#btnTransferir:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(-5px);
 }
 
 

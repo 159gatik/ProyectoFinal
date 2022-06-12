@@ -10,9 +10,7 @@ document.getElementById("agregarContacto").addEventListener("click", () => {
     contactos.push(new Contacto(nombre, cbu, referencia));
 
     setItemInLocalStorage("contactos", contactos);
-
     document.getElementById("contactoFormulario").style.display = 'none';
-
 })
 
 
