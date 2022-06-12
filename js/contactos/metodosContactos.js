@@ -11,10 +11,12 @@ document.getElementById("agregarContacto").addEventListener("click", () => {
 
     setItemInLocalStorage("contactos", contactos);
     document.getElementById("contactoFormulario").style.display = 'none';
+    document.querySelector(".divisor").appendChild("contactoFormulario")
 })
 
 
 const mostrarFormularioDeAgregarContacto = (nombre, cbu, referencia) => {
+
     document.getElementById("contactoFormulario").style.display = 'block';
 }
 
@@ -32,7 +34,7 @@ const listarContactos = () => {
          CBU: ${unContacto.cbu}
          Referencia: ${unContacto.referencia}
          `
-        document.body.appendChild(listado)
+        document.querySelector(".divisor").appendChild(listado)
     }
 
 }
@@ -56,7 +58,9 @@ const dibujarMenuDeContactos = () => {
             })
 
             boton.innerHTML = opcion.nombre;
-            document.body.appendChild(boton);
+
+            document.querySelector(".divisor").appendChild(boton)
+            //document.body.appendChild(boton);
         });
 
     }

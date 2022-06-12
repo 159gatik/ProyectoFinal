@@ -34,7 +34,6 @@
 // }
 
 document.getElementById("btnExtraer").addEventListener("click", () => {
-
     const dineroIngresado = document.getElementById("inputExtraccion").value;
     usuarioInicial.saldo -= dineroIngresado;
     Swal.fire(
@@ -42,16 +41,14 @@ document.getElementById("btnExtraer").addEventListener("click", () => {
         "Usted extrajo $" + dineroIngresado + ". Su saldo restante es " + usuarioInicial.getSaldoFormateado(),
         'success'
     )
-
     document.getElementById("formExtraccion").style.display = 'none';
 })
-
 const extraccion = () => {
-
     document.getElementById("formExtraccion").style.display = 'block';
-
-
 }
+
+
+
 document.getElementById("btnTransferir").addEventListener("click", () => {
 
     const ingresarCbu = document.getElementById("inputCbu").value;
@@ -62,7 +59,6 @@ document.getElementById("btnTransferir").addEventListener("click", () => {
         "Usted transfirió $" + ingresarDinero + "al CBU " + ingresarCbu,
         'success'
     )
-
     document.getElementById("formTransferencia").style.display = 'none';
 })
 

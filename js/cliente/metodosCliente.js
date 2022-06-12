@@ -2,7 +2,7 @@ const consultarSaldo = () => {
     const saldo = document.createElement("p");
 
     saldo.innerHTML = `Su saldo es: ${usuarioInicial.getSaldoFormateado()}`;
-    document.body.appendChild(saldo)
+    document.querySelector(".divisor").appendChild(saldo)
 }
 
 

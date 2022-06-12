@@ -245,3 +245,9 @@ input {
         font-size: 1.25rem;
     }
 }
+
+footer {
+    margin-top: 600px;
+    min-height: 150px;
+    background-color: #00a9d4;
+}
