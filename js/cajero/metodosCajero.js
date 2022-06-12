@@ -38,13 +38,35 @@ document.getElementById("btnTransferir").addEventListener("click", () => {
 
     const ingresarCbu = document.getElementById("inputCbu").value;
     const ingresarDinero = document.getElementById("inputDinero").value;
-    usuarioInicial.saldo -= ingresarDinero;
-    Swal.fire(
-        'Transferencia exitosa!',
-        "Usted transfirió $" + ingresarDinero + "al CBU " + ingresarCbu,
-        'success'
-    )
-    document.getElementById("formTransferencia").style.display = 'none';
+
+
+    if (ingresarDinero > usuarioInicial.saldo) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Saldo insuficiente!',
+            text: 'El monto ingresado es mayor al saldo que posee!'
+        })
+
+    }
+    else if (ingresarDinero < 100) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Monto invalido!',
+            text: 'El monto ingresado debe ser mayor a 100!'
+        })
+    }
+    else {
+
+        Swal.fire(
+            'Transferencia exitosa!',
+            "Usted transfirió $" + ingresarDinero + "al CBU " + ingresarCbu,
+            'success'
+        )
+
+        document.getElementById("formTransferencia").style.display = 'none';
+        usuarioInicial.saldo -= ingresarDinero;
+    }
+
 })
 
 const transferir = () => {

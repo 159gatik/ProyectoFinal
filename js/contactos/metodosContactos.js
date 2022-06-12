@@ -1,7 +1,7 @@
 let menuDibujado;
 
 
-document.getElementById("agregarContacto").addEventListener("click", () => {
+document.getElementById("btnContacto").addEventListener("click", () => {
 
     const nombre = document.getElementById("nombre").value;
     const cbu = document.getElementById("cbu").value;
@@ -59,7 +59,7 @@ const dibujarMenuDeContactos = () => {
 
             boton.innerHTML = opcion.nombre;
 
-            document.querySelector(".divisor").appendChild(boton)
+            document.getElementById("main").appendChild(boton)
             //document.body.appendChild(boton);
         });
 

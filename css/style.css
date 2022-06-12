@@ -29,7 +29,7 @@
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#agregarContacto {
+#btnContacto {
     color: blue;
     padding: 10px;
 }
@@ -208,15 +208,21 @@ input {
 
 /* BOTON CONTACTOS */
 #btn_contact {
-    margin-left: 500px;
-    background-color: #00a9d4;
-    color: #000000;
-    font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1rem;
+    margin-left: 130px;
     text-align: center;
-    text-decoration: none #000000 solid;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    letter-spacing: 10px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
     cursor: pointer;
-    transform: rotate(-2deg);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
     touch-action: manipulation;
 }
 
@@ -225,18 +231,20 @@ input {
 }
 
 #btn_contact:after {
-    content: '';
+    content: "";
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    width: 100%;
+    z-index: -1;
     position: absolute;
-    border: 1px solid #000000;
-    bottom: 4px;
-    left: 4px;
-    width: calc(100% - 1px);
-    height: calc(100% - 1px);
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
 }
 
 #btn_contact:hover:after {
-    bottom: 2px;
-    left: 2px;
+    top: 0px;
+    left: 0px;
 }
 
 @media (min-width: 768px) {
@@ -247,7 +255,35 @@ input {
 }
 
 footer {
-    margin-top: 600px;
-    min-height: 120px;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+}
+
+#btnContacto {
+    margin-bottom: 15px;
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    margin-left: 80px;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    line-height: 1.25;
+    min-height: 3rem;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    transition: all 250ms;
+    width: auto;
+}
+
+#btnContacto:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(-5px);
 }
