@@ -60,7 +60,6 @@ const dibujarMenuDeContactos = () => {
             boton.innerHTML = opcion.nombre;
 
             document.getElementById("main").appendChild(boton)
-            //document.body.appendChild(boton);
         });
 
     }
