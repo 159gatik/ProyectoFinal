@@ -19,7 +19,7 @@ document.getElementById("btnExtraer").addEventListener("click", () => {
     else {
         Swal.fire(
             'Extracion exitosa!',
-            "Usted extrajo $" + dineroIngresado + ". Su saldo restante es " + usuarioInicial.getSaldoFormateado(),
+            "Usted extrajo $" + dineroIngresado + ". Su saldo restante es " + (usuarioInicial.saldo -= dineroIngresado),
             'success'
         )
         document.getElementById("formExtraccion").style.display = 'none';
@@ -70,8 +70,5 @@ document.getElementById("btnTransferir").addEventListener("click", () => {
 })
 
 const transferir = () => {
-
     document.getElementById("formTransferencia").style.display = 'block';
-
-
 }

@@ -3,7 +3,9 @@ const menuNavegacion = () => {
     let opciones = [{ nombre: "CONSULTAR SALDO", metodo: consultarSaldo },
     { nombre: "EXTRACCION", metodo: extraccion },
     { nombre: "TRANSFERIR", metodo: transferir },
-    { nombre: "CONTACTOS", metodo: dibujarMenuDeContactos }]
+    { nombre: "CONTACTOS", metodo: dibujarMenuDeContactos },
+    { nombre: "CONSULTAR DOLAR", metodo: monedaExtranjera }
+    ]
 
     opciones.forEach((opcion) => {
 
@@ -32,3 +34,4 @@ const divisorDeMenu = () => {
     document.querySelector(".divisor").appendChild(image)
 
 }
+

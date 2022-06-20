@@ -1,3 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
 .gradient-custom {
     background: #6a11cb;
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
@@ -84,9 +92,6 @@ p {
 }
 
 .formularios input {
-    /* margin-top: 20px;
-    margin-left: 50px;
-    margin-top: 50px; */
     font-family: inherit;
     width: 100%;
     border: 0;
@@ -155,8 +160,8 @@ p {
 
 
 #btn_id {
-    margin-left: 130px;
-    text-align: center;
+    margin-top: 50px;
+    margin-left: 80px;
     font-size: 16px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -188,13 +193,6 @@ p {
 #btn_id:hover:after {
     top: 0px;
     left: 0px;
-}
-
-
-@media (max-width: 800px) {
-    button {
-        display: block;
-    }
 }
 
 
@@ -286,4 +284,19 @@ footer {
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
     color: rgba(0, 0, 0, 0.65);
     transform: translateY(-5px);
+}
+
+/* BOTON COTIZACION */
+
+#btnCotizacion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.card {
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    color: white;
 }
