@@ -18,7 +18,9 @@ const menuNavegacion = () => {
 
         boton.innerHTML = opcion.nombre;
         document.getElementById("main").appendChild(boton);
+
     });
+
 }
 
 const divisorDeMenu = () => {

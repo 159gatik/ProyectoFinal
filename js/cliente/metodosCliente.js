@@ -1,8 +1,10 @@
 const consultarSaldo = () => {
+
     const saldo = document.createElement("p");
 
     saldo.innerHTML = `Su saldo es: ${usuarioInicial.getSaldoFormateado()}`;
-    document.querySelector(".divisor").appendChild(saldo)
+
+    document.querySelector("#main").appendChild(saldo)
 }
 
 

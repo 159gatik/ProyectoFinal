@@ -34,7 +34,7 @@ const listarContactos = () => {
          CBU: ${unContacto.cbu}
          Referencia: ${unContacto.referencia}
          `
-        document.querySelector(".divisor").appendChild(listado)
+        document.querySelector("#main").appendChild(listado)
     }
 
 }
