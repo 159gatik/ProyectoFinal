@@ -11,13 +11,16 @@
     background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
 }
 
-
+.darkmode--activated #titulo {
+    color: white;
+    text-shadow: rgba(37, 117, 252, 1) 5px 5px 5px;
+}
 
 #titulo {
+    background-clip: text;
     font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     transform: rotate(-1deg);
-    color: #313131;
-    text-shadow: rgba(93, 82, 248, 0.692) 3px 5px 3px;
+    text-shadow: #6a11cb 5px 5px 5px;
 }
 
 .div_form {
