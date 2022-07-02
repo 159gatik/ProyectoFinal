@@ -27,13 +27,11 @@ const getUsuarioInicial = () => {
 
     let usuarioResultado;
 
-    // si es diferente de nulo
     if (usuarioObtenido) {
         usuarioResultado = new Cliente(1, usuarioObtenido.nombre, usuarioObtenido.saldo);
         document.getElementById("main").style.display = 'block';
         document.getElementById("formLogin").style.display = 'none';
     }
-    // si es nulo
     else {
         document.getElementById("formLogin").style.display = 'block';
     }
