@@ -39,6 +39,5 @@ const getUsuarioInicial = () => {
     return usuarioResultado;
 }
 
-// Variable de cliente global
 let usuarioInicial = getUsuarioInicial();
 
