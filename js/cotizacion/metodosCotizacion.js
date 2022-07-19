@@ -1,16 +1,12 @@
 
 const monedaExtranjera = () => {
-
     fetch("https://www.dolarsi.com/api/api.php?type=valoresprincipales")
         .then((response) => response.json())
         .then((json) => mostrarDatos(json))
-
 }
 
 const mostrarDatos = (data) => {
-
     const div = document.getElementById("btnCotizacion");
-
     data.forEach(dolar => {
         const divPag = document.createElement("div")
         divPag.innerHTML = `
@@ -23,7 +19,5 @@ const mostrarDatos = (data) => {
         </div>
         `
         div.appendChild(divPag)
-
     })
-
 }

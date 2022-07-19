@@ -16,6 +16,11 @@
     text-shadow: rgba(37, 117, 252, 1) 5px 5px 5px;
 }
 
+.darkmode--activated #saludo {
+    color: white;
+    text-shadow: rgba(37, 117, 252, 1) 5px 5px 5px;
+}
+
 #titulo {
     background-clip: text;
     font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
